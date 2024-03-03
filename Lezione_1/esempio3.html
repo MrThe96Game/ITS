@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>Esempio 3</title>
+  </head>
+  <body background="background.jpeg" style="background-repeat: no-repeat; background-size: cover;">
+    <center><h1>Esempio 3: uso di tabelle e di un contatore</h1></center>
+
+    <ul>
+      <!-- a questa UL (unordered list) non corrispondera' nessun 
+            LI (list item), il suo scopo e' solo quello di indentare
+            il testo della pagina -->
+
+      <p>
+        <!-- P sta per paragraph, impone di saltare una linea -->
+        <font size="+2">esempio di tabella:</font>
+      </p>
+
+      <p>
+        <center>
+          <table border COLS="2" width="90%">
+            <tr>
+              <td>Riga 1 - Colonna 1</td>
+              <td>
+                Una tabella pu&ograve; contenere qualsiasi cosa. Questa che
+                segue è una lista.
+                <p></p>
+                <ul>
+                  <li>elemento 1</li>
+                  <li>elemento 2</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                La tabella può contenere altre tabelle:
+                <p></p>
+                <table border COLS="2" width="100%">
+                  <tr>
+                    <td>seconda tabella elem. (1,1)</td>
+                    <td>seconda tabella elem. (1,2)</td>
+                  </tr>
+                </table>
+                <p></p>
+              </td>
+
+              <td>
+                La tabella pu&ograve; contenere immagini
+                <img src="myGif.gif" height="50" width="66" />
+                questa è un'immagine GIF animato
+              </td>
+            </tr>
+          </table>
+        </center>
+      </p>
+
+      <p>
+        <font size="+2">i bordi della tabella possono essere invisibili:</font>
+      </p>
+
+      <p>
+        <center>
+          <table COLS="2" width="50%">
+            <tr>
+              <td>
+                Riga 1 - Colonna 1: questo &egrave; un esempio di tabella i cui
+                bordi sono invisibili
+              </td>
+              <td>
+                Riga 1 - Colonna 2: il testo viene posizionato all'interno di
+                ogni casella, rispettando i mutui rapporti tra le caselle
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Riga 2 - Colonna 1: questo sistema pu&ograve; essere usato per
+                ottenere effetti di formattazione (allineamenti, incolonnamenti)
+                altrimenti impossibili per un linguaggio che fa uso di marcatori
+                logici e non fisici.
+              </td>
+              <td>
+                <center>questo</center>
+                <center>testo</center>
+                <center>è</center>
+                <center>centrato</center>
+              </td>
+            </tr>
+          </table>
+        </center>
+      </p>
+  </body>
+</html>
