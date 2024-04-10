@@ -1,58 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>ParITle</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <!-- Grid -->
-    <div id="grid" class="grid"></div>
-
-    <!-- Keyboard -->
-    <div id="keyboard" class="keyboard">
-        <!-- First row -->
-        <div>
-            <span class="key q">Q</span>
-            <span class="key w">W</span>
-            <span class="key e">E</span>
-            <span class="key r">R</span>
-            <span class="key t">T</span>
-            <span class="key y">Y</span>
-            <span class="key u">U</span>
-            <span class="key i">I</span>
-            <span class="key o">O</span>
-            <span class="key p">P</span>
-        </div>
-
-        <!-- Second row -->
-        <div>
-            <span class="key a">A</span>
-            <span class="key s">S</span>
-            <span class="key d">D</span>
-            <span class="key f">F</span>
-            <span class="key g">G</span>
-            <span class="key h">H</span>
-            <span class="key j">J</span>
-            <span class="key k">K</span>
-            <span class="key l">L</span>
-        </div>
-
-        <!-- Third row -->
-        <div>
-            <span class="key">Invio</span>
-            <span class="key z">Z</span>
-            <span class="key x">X</span>
-            <span class="key c">C</span>
-            <span class="key v">V</span>
-            <span class="key b">B</span>
-            <span class="key n">N</span>
-            <span class="key m">M</span>
-            <span class="key">Backspace</span>
-        </div>
+    <div id="vue-app">
+        <button v-on:click="changeInput">Click me</button>
+        <!-- <div>{{mystring}}</div>
+        <a v-bind:href="myLink">Doc to {{ linkString }}</a>
+        <div v-show="myBool">asd</div>
+        <div v-for="item in myArray">{{ item.a }}</div> -->
+        <!-- <input type="text" :value="textInput" @input="writeString"> -->
+        <input type="text" v-model="textInput">
     </div>
 </body>
 </html>
