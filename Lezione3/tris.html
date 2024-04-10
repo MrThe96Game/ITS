@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+    <!-- 
+        In questo esempio mostriamo la costruzione di una griglia in maniera dichiarativa. Andiamo cioè a costruire quest'ultima senza definire una logica di flusso ma descrivendo la struttura che la rappresenta.
+        Importante è l'utilizzo delle classi css che in questo definiscono le proprietà dei div.
+        row -> classe che definisce la riga
+        cell -> classe che definische la cella
+        top -> classe che definisce le celle superiori
+        right, bottom, left -> come per la precedente, classi che attribuiscono proprietà aggiuntive alle celle
+    -->
+<div id="grid">
+    <div class="row odd">
+        <div class="cell top left"></div>
+        <div class="cell top"></div>
+        <div class="cell top right"></div>
+    </div>
+    <div class="row even">
+        <div class="cell left"></div>
+        <div class="cell"></div>
+        <div class="cell right"></div>
+    </div>
+    <div class="row odd">
+        <div class="cell bottom left"></div>
+        <div class="cell bottom"></div>
+        <div class="cell bottom right"></div>
+    </div>
+</div>
+
+
+</html>
+<script>
+    //console log scrive nella console del browser (aprire i developer tools)
+    console.log("Hello world!");
+
+    //nella console è possibile mostrare informazioni riguardanti qualsiasi oggetto. In questo caso mostriamo l'oggetto document, che è l'istanza della pagina, ovvero la sua renderizzazione
+    console.log(document);
+    
+    //I selettori permettono di recuperare l'istanza di un nodo atttraverso il metodo querySelector
+    let firstCell = (document.querySelectorAll(".cell"));
+    
+    console.log(firstCell);
+
+
+    //una volta recuperata l'istanza dell'oggetto è possibile accedere alle sue proprietà di stile
+    //firstCell[0].style.backgroundColor="red";
+
+    //Il metodo addEventiListener assegna all'evento specificato una callback, cioè una funzione che viene passata come parametro di una funzione. Serve a specificare operazioni da eseguire in seguito ad altre operazioni.E' alla base della programmazion async
+
+    // firstCell[0].addEventListener("click",e=>{
+    //     firstCell[0].style.backgroundColor="green";
+    // })
+
+    //firstCell[0].addEventListener("click",callback)
+
+
+
+
+
+    //----------------------------------------------
+
+    
+
+
+    // let callback=function(clickEvent) {
+    //     let targetCell=clickEvent.target;
+    //     //targetCell.textContent="X"
+    //     targetCell.innerHTML="<div class='x'>X</div>"
+    //     // console.log(cell.target)
+
+    //     console.log(targetCell.classList," || ",targetCell.getAttribute("class"));
+
+    //     targetCell.setAttribute("giocatore","X");
+    //     console.log(targetCell.getAttribute("giocatore"));
+    //     console.log(targetCell.hasAttribute("giocatore"));
+    //     targetCell.removeAttribute("giocatore");
+    //     console.log(targetCell.hasAttribute("giocatore"));
+
+
+    //     // console.log(cell.target.getAttribute("class"))
+    //     //e.target.textContent="";
+    // }
+
+
+    // let callback=function(clickEvent) {
+
+    //     //Verifico che ci sia un attributo che traccia lo stato di click
+    //     let clicked = clickEvent.target.hasAttribute("clicked");
+    //     if (!clicked) {
+    //         clickEvent.target.setAttribute("clicked","");
+    //         clickEvent.target.textContent="X";
+    //     } else {
+    //         clickEvent.target.removeAttribute("clicked");
+    //         clickEvent.target.textContent="";
+    //     }
+
+    // }
+
+    let giocatore="X"
+
+    let callback = function (clickEvent) {
+
+        //Verifico che ci sia un attributo che traccia lo stato di click
+        let clicked = clickEvent.target.hasAttribute("giocatore");
+        if (!clicked) {
+            clickEvent.target.setAttribute("giocatore", giocatore);
+            clickEvent.target.textContent = giocatore;
+            giocatore=giocatore=="X" ? "O" :"X";
+            chiHaVinto();
+
+        } 
+
+    }
+
+
+
+    let allCells = document.querySelectorAll(".cell");
+    allCells.forEach(cell => {
+        cell.addEventListener("click", callback);
+    })
+
+
+    //stato della cella 
+
+
+
+
+
+</script>
+<style>
+    /* Selettore con attributo */
+    .cell[clicked] {
+        background-color: aqua;
+    }
+    /* Pseudo selettore */
+    .cell:hover {
+        cursor: pointer;
+    }
+    /* Pseudo selettore per selezione le righe pari e dispari*/
+    .odd>div:nth-child(odd) {
+        /* //background-color: #11118833; */
+    }
+    /* Pseudo selettore per selezione le righe pari e dispari*/
+    .even>div:nth-child(even) {
+        /* background-color: #11118833; */
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .cell {
+        border: 1px solid blue;
+        height: calc(48px * 2);
+        width: calc(48px * 2);
+    }
+
+    .cell.bottom {
+        border-bottom: 1px solid white;
+    }
+
+    .cell.top {
+        border-top: 1px solid white;
+    }
+
+    .cell.left {
+        border-left: 1px solid white;
+    }
+
+    .cell.right {
+        border-right: 1px solid white;
+    }
+</style>

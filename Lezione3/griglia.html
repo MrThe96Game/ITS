@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<div id="grid">
+
+</div>
+
+
+</html>
+<script>
+    //In questo esempio la griglia è costruita in maniera imperativa, c'è quindi un flusso di codice che descrive la sua costruzione
+    let createGrid = function (rows = 3, cols = 3, width = 32, height = 32) {
+        //recupero l'elemento del DOM dove voglio costruire la griglia
+        let grid = document.getElementById("grid");
+
+        //Elimino eventuali righe contenute all'interno di questo div
+        grid.querySelectorAll(".row").forEach(n=>{
+            grid.removeChild(n)
+        })
+
+        for (let row_index = 0; row_index < rows; row_index++) {
+
+            //i div non sono più costruiti in maniera dichiarativa ma andiamo a costruire la loro istanza, attribuiamo le classi e gli attributi necessari
+            let row = document.createElement("div");
+            row.classList = ["row"];
+            //gestione colore
+            if (row_index % 2 == 0) row.classList.add("even")
+            if (row_index % 2 != 0) row.classList.add("odd")
+
+            row.setAttribute("id", "row_" + row_index)
+
+            //ripetiamo l'operazione per le colonne
+            for (let col_index = 0; col_index < cols; col_index++) {
+                let col = document.createElement("div");
+                col.classList = ["cell"];
+
+                //gestione bordi
+                if (row_index == 0) col.classList.add("top");
+                if (row_index == rows - 1) col.classList.add("bottom")
+
+                if (col_index == 0) col.classList.add("left");
+                if (col_index == cols - 1) col.classList.add("right")
+
+                let id = "cell" + row_index + "" + col_index;
+                col.setAttribute("id", "cell_" + id);
+
+                col.style.width = width + "px";
+                col.style.height = height + "px";
+
+                //l'instanza del div va quindi aggiunta ad un div padre
+                row.appendChild(col);
+            }
+            //l'instanza del div va quindi aggiunta ad un div padre
+            grid.appendChild(row);
+        }
+
+
+    }
+
+
+
+
+
+
+</script>
+<style>
+    .odd>div:nth-child(odd) {
+        background-color: #11118833;
+    }
+
+    .even>div:nth-child(even) {
+        background-color: #11118833;
+    }
+
+    .cell.bottom {
+        border-bottom: 1px solid white;
+    }
+
+    .cell.top {
+        border-top: 1px solid white;
+    }
+
+    .cell.left {
+        border-left: 1px solid white;
+    }
+
+    .cell.right {
+        border-right: 1px solid white;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .cell {
+        border: 1px solid blue;
+        height: calc(48px * 2);
+        width: calc(48px * 2);
+    }
+</style>

@@ -1,0 +1,87 @@
+<html>
+<body>
+    <div>
+        <form>
+            <input id="nome"/>
+            <input id="cognome"/>
+            <input id="professione"/>
+            
+        </form>
+        <button onclick="salvaUtente()">SALVA UTENTE</button>
+
+    </div>
+    <div>
+        <table id="table">
+
+        </table>
+
+
+    </div>
+
+</body>
+
+<script>
+setTimeout(()=>{
+    aggiornaTabella()
+},1000)
+function aggiornaTabella() {
+    fetch("http://10.30.25.111:3000/users").then(result=>{
+        result.json().then(data=>{
+            
+            let tabella=document.getElementById("table");
+
+            //svuoto la tabella
+            tabella.querySelectorAll("tr").forEach(e=>{
+                tabella.removeChild(e)
+            })
+
+            let html=""
+            data.forEach(dato=>{
+                html+="<tr>";
+                Object.keys(dato).forEach(chiave=>{
+                    html+="<td>"+dato[chiave]+"</td>"
+                })
+                html+="</tr>"
+            })
+            tabella.innerHTML=html;
+        })
+    });
+}
+
+function salvaUtente() {
+  
+    let nome = document.getElementById("nome").value
+    let cognome = document.getElementById("cognome").value
+    let professione = document.getElementById("professione").value
+    
+    let json_da_inviare={
+        nome,
+        cognome,
+        professione,
+        dataInserimento:new Date()
+    }
+    console.log(json_da_inviare);
+
+    fetch("http://10.30.25.111:3000/user",{
+        "method":"POST",
+        "body":JSON.stringify(json_da_inviare),
+        "headers": {
+            "Content-Type":"application/json"
+        }
+
+    }).then(e=>{
+
+        console.log("aggiunto")
+      
+
+    })
+
+    
+
+}
+
+
+
+</script>
+
+</html>

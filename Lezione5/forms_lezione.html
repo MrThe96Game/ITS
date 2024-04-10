@@ -1,0 +1,94 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <form>
+        <input id="nome" value="Test" name="nome" type="text" />
+        <input onmouseover="showPassword()" onmouseout="hidePassword()" id="password" value="Test" name="password" type="password" />
+        <input type="checkbox">
+        <input type="file">
+
+        <input type="number">
+    </form>
+    <!--<button id="show_password" onclick="showPassword()">SHOW PASSWORD</button>-->
+
+    <button id="bottone_reset" onclick="reset()">RESET</button>
+    <button id="bottone">LOGIN</button>
+
+
+
+
+
+
+
+
+</body>
+<script>
+    let input_nome = document.querySelector("#nome");
+    let input_password = document.querySelector("#password");
+    let nodo_bottone = document.querySelector("#bottone");
+
+    fetch("https://jsonplaceholder.typicode.com/todos").then(result=>{
+        result.json().then(data=>{
+            console.log(data);
+        })
+    })
+
+    nodo_bottone.addEventListener("click", event => {
+        console.log(input_nome.value);
+        console.log(input_password.value);
+
+        let json_richiesta = {
+            nome:input_nome.value,
+            password:input_password.value
+        };
+
+        // fetch("/login",{
+        //     body:json_richiesta,
+        //     method:"POST"
+        // })
+
+      
+     
+
+        console.log(JSON.parse(JSON.stringify(json_richiesta)))
+    })
+
+    function reset() {
+        input_nome.value=""
+        input_password.value=""
+    }
+
+    function showPassword() {
+        input_password.setAttribute("type","text")
+    }
+    function hidePassword() {
+        input_password.setAttribute("type","password")
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // fetch("https://jsonplaceholder.typicode.com/todos").then(result=>{
+    //     result.json().then(q=>{
+    //         console.log(q)
+    //     })
+    // })
+
+</script>
+
+
+
+</html>

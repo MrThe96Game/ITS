@@ -1,0 +1,17 @@
+{
+    "nome":"Paolo",
+    "cognome":"",
+    "età":17,
+    "nazionalità":null,
+    "array":[
+        "attributo1","attributo2"
+    ],
+    "arrayDiNumeri":[3,2,5],
+    "esempioDiOggetto":{
+        "nome2":"Paolo2",
+        "cognome2":"",
+        "esempiodiOggetto":{
+            .....
+        }
+    }
+}

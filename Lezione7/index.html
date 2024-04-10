@@ -1,0 +1,108 @@
+<body>
+    <div id="form"></div>
+</body>
+<script>
+    let form = document.getElementById("form");
+
+    const definition = [
+        {
+            key: "nome",
+            label: "Nome",
+            type: "text",
+            options: [],
+            placeholder: "Nome",
+        },
+        {
+            key: "cognome",
+            label: "Cognome",
+            type: "text",
+            options: [],
+            placeholder: "Cognome",
+        },
+        {
+            key: "age",
+            label: "Età",
+            type: "text",
+            options: [],
+            placeholder: "Età",
+        },
+        {
+            key: "age2",
+            label: "Età",
+            type: "text",
+            options: [],
+            placeholder: "Età",
+        },
+        {
+            key: "Select",
+            label: "select",
+            type: "select",
+            options: [
+                { value: "opt1", label: "Opt1" },
+                { value: "opt2", label: "Opt2" },
+                { value: "opt3", label: "Opt3" },
+                { value: "opt4", label: "Opt4" },
+            ],
+            placeholder: "S",
+        },
+    ];
+
+    function writeJson(event) {
+        let jsonOut = {};
+        document.querySelectorAll(".inputNode").forEach((node) => {
+            jsonOut[node.id] = node.value;
+        });
+        console.log(jsonOut);
+    }
+
+    definition.forEach((element) => {
+        switch (element.type) {
+            case "select":
+                let node = document.createElement("select");
+                element.options.forEach((opt) => {
+                    let optionNode = document.createElement("option");
+                    optionNode.setAttribute("value", opt.value);
+                    node.classList = ["inputNode"];
+                    node.setAttribute("id", element.key);
+                    optionNode.textContent = opt.label;
+                    node.appendChild(optionNode);
+                });
+                node.addEventListener("input", writeJson);
+                form.appendChild(node);
+                break;
+
+            default:
+                let node_input = document.createElement("input");
+                node_input.setAttribute("type", element.type);
+                node_input.classList = ["inputNode"];
+                node_input.setAttribute("id", element.key);
+                node_input.setAttribute("placeholder", element.placeholder);
+                node_input.addEventListener("input", writeJson);
+                form.appendChild(node_input);
+        }
+    });
+</script>
+<style>
+    #form {
+        display: flex;
+        flex-direction: column;
+    }
+    #form > input {
+        width: 228px;
+        margin-top: 24px;
+        background: #fafafa;
+        outline: none;
+        border: 0;
+        font-size: 16px;
+        border-bottom: 1px solid grey;
+    }
+    #form > select {
+        width: 228px;
+        margin-top: 24px;
+        background: #fafafa;
+        outline: none;
+        border: 0;
+        font-size: 16px;
+        border-bottom: 1px solid grey;
+    }
+</style>
