@@ -9,7 +9,12 @@
 </head>
 <body>
     <div id="vue-app">
+        <button @click="sumValue($event, 1)">Add</button>
+        <button @click="sumValue($event, -1)">Sub</button>
+        <div>{{ counter }}</div>
+
         <button v-on:click="changeInput">Click me</button>
+        <button v-on:click="changeClass">Change class</button>
         <!-- <div>{{mystring}}</div>
         <a v-bind:href="myLink">Doc to {{ linkString }}</a>
         <div v-show="myBool">asd</div>
