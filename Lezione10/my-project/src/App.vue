@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <h2>Ripasso</h2>
+    <h2>Ripasso</h2>
 
     <div>Basic Components</div>
     <BasicComponents />
@@ -27,7 +27,7 @@
 
     <div>ConditionalRendering</div>
     <ConditionalRendering />
-    <br> -->
+    <br>
 
     <div>
       <ParentOne />

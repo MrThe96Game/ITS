@@ -7,6 +7,7 @@
 
 <script>
 export default {
+    props: ['word'],
     data: function() {
         return {
             counter: 0
