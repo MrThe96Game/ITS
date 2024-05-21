@@ -1,18 +1,19 @@
 <template>
   <div>
     <div class="card">
-      <div v-if="!editabile">#{{ indice_piu_uno }} - {{ titolo }}</div>
-      <div v-else>
+      <div class="card-body" v-if="!editabile">#{{ indice_piu_uno }} - {{ titolo }}</div>
+      <div class="card-body" v-else>
         <input v-model="testo" @change="ok" />
       </div>
+      <button class="btn-del" @click="deleteTask">Delete</button>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  emits: ["conferma"],
-  props: ["titolo", "indice", "editabile"],
+  emits: ["conferma", "delete"],
+  props: ["titolo", "indice", "editabile", "id", "colonna"],
   computed: {
     indice_piu_uno() {
       return +this.indice + 1;
@@ -21,6 +22,9 @@ export default {
   methods: {
     ok() {
       this.$emit("conferma",{titolo:this.testo})
+    },
+    deleteTask() {
+      this.$emit("delete", {id: this.id, colonna:this.colonna})
     }
   },
   data: function () {
@@ -50,5 +54,17 @@ export default {
   margin-top: 6px;
   margin-bottom: 6px;
   padding: 8px;
+  position: relative;
+}
+
+.card-body,
+.btn-del {
+  display: inline-block;
+}
+
+.btn-del {
+  top: 6px;
+  right: 6px;
+  position: absolute;
 }
 </style>
