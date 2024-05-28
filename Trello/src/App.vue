@@ -1,8 +1,8 @@
 <template>
   <div class="header">
-    <a>Link 1</a>
-    <a>Link 2</a>
-    <a>Link 3</a>
+    <router-link to="/dashboard?id=1">Link 1</router-link>
+    <router-link to="/dashboard?id=2">Link 2</router-link>
+    <router-link to="/dashboard?id=3">Link 3</router-link>
     <button @click="addCount">add</button>
   </div>
   <div id="container">
@@ -14,7 +14,8 @@
         </div>
       </div>
     </div>
-    <div class="dashboard">
+    <router-view />
+    <!-- <div class="dashboard">
       <h2>{{this.dashboards[this.selectedDashboard]}}</h2>
       <div class="cards">
         <div v-for="(oggettocolonna, index) in getColumns" class="colonna">
@@ -23,7 +24,7 @@
           <div class="pulsante-aggiungi" @click="aggiungiCard(index)">+ Aggiungi </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
