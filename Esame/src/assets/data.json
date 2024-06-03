@@ -1,0 +1,180 @@
+[
+  {
+    "dashboard": "Temporizzatore Pomodoro",
+    "description": "La Tecnica del Pomodoro è un popolare metodo di gestione del tempo. Questo progetto prevede la creazione di un'app timer che faciliti sessioni di lavoro mirate con brevi pause, utilizzando la capacità di Vue di gestire intervalli di tempo e interazioni con gli utenti.",
+    "columns": [
+      {
+        "name": "Obbligatori",
+        "tasks": [
+          {
+            "title": "Gestione durata",
+            "description": "Consentire agli utenti di impostare la durata delle sessioni di lavoro e delle pause (considerare la possibilità di fornire opzioni predefinite basate sulla Tecnica del Pomodoro).",
+            "id": 1
+          },
+          {
+            "title": "Feedback visivo",
+            "description": "Implementare un timer che faccia un conto alla rovescia visivo, indicando il tempo rimanente all'interno di una sessione di lavoro o di una pausa.",
+            "id": 2
+          },
+          {
+            "title": "Gestione timer",
+            "description": "Include funzionalità per l'avvio, la pausa e il ripristino del timer rispettando la schedulazione",
+            "id": 3
+          },
+          {
+            "title": "Notifica audio/visiva",
+            "description": "Fornire una notifica audio o visiva al termine di una sessione di lavoro o di una pausa",
+            "id": 4
+          }
+        ]
+      },
+      {
+        "name": "Facoltativi",
+        "tasks": [
+          {
+            "title": "Task Design",
+            "description": "Create a comprehensive layout for the new web interface focusing on UX principles.",
+            "id": 6
+          },
+          {
+            "title": "Task Implement",
+            "description": "Implement the new CRM system to streamline customer relationship management.",
+            "id": 7
+          },
+          {
+            "title": "Task Verify",
+            "description": "Conduct thorough testing to verify the system's functionality across all user scenarios.",
+            "id": 8
+          },
+          {
+            "title": "Task Automate",
+            "description": "Automate repetitive tasks to increase productivity and reduce human error.",
+            "id": 9
+          },
+          {
+            "title": "Task Schedule",
+            "description": "Prepare a detailed project timeline with milestones and deadlines for all team members.",
+            "id": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dashboard": "Blog semplice",
+    "description": "Costruire un blog ti consente di sperimentare la gestione dei contenuti dove gli utenti possono visualizzare i post del blog mentre un utente privilegiato può aggiungere nuovi post",
+    "columns": [
+      {
+        "name": "Obbligatori",
+        "tasks": [
+          {
+            "title": "Visualizzazione dei post",
+            "description": "Visualizza un elenco di post del blog con titoli, riepiloghi e immagini potenzialmente in primo piano",
+            "id": 11
+          },
+          {
+            "title": "Gestione post",
+            "description": "Crea una pagina dedicata per la creazione e la modifica di nuovi post del blog (senza integrazione backend)",
+            "id": 12
+          }
+        ]
+      },
+      {
+        "name": "Facoltativi",
+        "tasks": [
+          {
+            "title": "Task Coordinate",
+            "description": "Coordinate between cross-functional teams to ensure project alignment and resource availability.",
+            "id": 16
+          },
+          {
+            "title": "Task Plan",
+            "description": "Plan and schedule the phases of the upcoming product launch.",
+            "id": 17
+          },
+          {
+            "title": "Task Build",
+            "description": "Build a prototype for testing the new design under real-world conditions.",
+            "id": 18
+          },
+          {
+            "title": "Task Analyze",
+            "description": "Analyze user feedback to determine areas for improvement in our service delivery.",
+            "id": 19
+          },
+          {
+            "title": "Task Optimize",
+            "description": "Optimize the production processes to achieve higher efficiency and lower costs.",
+            "id": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dashboard": "E-commerce",
+    "description": "Costruire una pagina che rappresenti un sito di e-commerce.",
+    "columns": [
+      {
+        "name": "Obbligatori",
+        "tasks": [
+          {
+            "title": "Elenco oggetti disponibili",
+            "description": "Visualizza un elenco di oggetti disponibili con titoli, riepiloghi e immagini potenzialmente in primo piano.",
+            "id": 21
+          },
+          {
+            "title": "Carrello",
+            "description": "Costruire il carrello per l’aggiunta di nuovi elementi e la rimozione di elementi già presenti a carrello",
+            "id": 22
+          },
+          {
+            "title": "Task Manage",
+            "description": "Manage the project's scope to ensure deliverables are met within budget and time constraints.",
+            "id": 23
+          },
+          {
+            "title": "Task Oversee",
+            "description": "Oversee the daily operations of the remote teams to ensure alignment with corporate goals.",
+            "id": 24
+          },
+          {
+            "title": "Task Facilitate",
+            "description": "Facilitate a series of workshops to drive innovation within the product development team.",
+            "id": 25
+          }
+        ]
+      },
+      {
+        "name": "Facoltativi",
+        "tasks": [
+          {
+            "title": "Descrizione prodotto",
+            "description": "Creare una pagina di descrizione del prodotto",
+            "id": 26
+          },
+          {
+            "title": "Checkout",
+            "description": "Create pagina di checkout, ovvero di chiusura dell'ordine attribuendo un codice univoco all'ordine eseguito",
+            "id": 27
+          },
+          {
+            "title": "Task Resolve",
+            "description": "Resolve ongoing issues with supplier delivery delays impacting production schedules.",
+            "id": 28
+          },
+          {
+            "title": "Task Negotiate",
+            "description": "Negotiate with software vendors to secure better rates for enterprise licenses.",
+            "id": 29
+          },
+          {
+            "title": "Task Innovate",
+            "description": "Innovate new approaches to market analysis that will reduce costs and timeframes.",
+            "id": 30
+          }
+        ]
+      }
+    ]
+  }
+]
