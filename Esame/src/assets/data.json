@@ -32,29 +32,14 @@
         "name": "Facoltativi",
         "tasks": [
           {
-            "title": "Task Design",
-            "description": "Create a comprehensive layout for the new web interface focusing on UX principles.",
+            "title": "Timer multipli",
+            "description": "Implementare la possibilità di tenere attivi più timer contemporaneamente",
             "id": 6
           },
           {
-            "title": "Task Implement",
-            "description": "Implement the new CRM system to streamline customer relationship management.",
+            "title": "Modifica timer attivo",
+            "description": "Includere funzionalità per modificare il tempo del timer mentre quest'ultimo è attivo",
             "id": 7
-          },
-          {
-            "title": "Task Verify",
-            "description": "Conduct thorough testing to verify the system's functionality across all user scenarios.",
-            "id": 8
-          },
-          {
-            "title": "Task Automate",
-            "description": "Automate repetitive tasks to increase productivity and reduce human error.",
-            "id": 9
-          },
-          {
-            "title": "Task Schedule",
-            "description": "Prepare a detailed project timeline with milestones and deadlines for all team members.",
-            "id": 10
           }
         ]
       }
@@ -83,29 +68,19 @@
         "name": "Facoltativi",
         "tasks": [
           {
-            "title": "Task Coordinate",
-            "description": "Coordinate between cross-functional teams to ensure project alignment and resource availability.",
+            "title": "Login",
+            "description": "Inserire una pagina di login (non serve un'effettiva chiamata ad un servizio di login)",
             "id": 16
           },
           {
-            "title": "Task Plan",
-            "description": "Plan and schedule the phases of the upcoming product launch.",
+            "title": "Post per utente",
+            "description": "Una volta creata la pagina di login, ogni utente avrà i suoi post personali",
             "id": 17
           },
           {
-            "title": "Task Build",
-            "description": "Build a prototype for testing the new design under real-world conditions.",
+            "title": "Post verso altri utenti",
+            "description": "Implementare la possibilita di creare dei post sulla pagina di un altro utente",
             "id": 18
-          },
-          {
-            "title": "Task Analyze",
-            "description": "Analyze user feedback to determine areas for improvement in our service delivery.",
-            "id": 19
-          },
-          {
-            "title": "Task Optimize",
-            "description": "Optimize the production processes to achieve higher efficiency and lower costs.",
-            "id": 20
           }
         ]
       }
@@ -129,19 +104,9 @@
             "id": 22
           },
           {
-            "title": "Task Manage",
-            "description": "Manage the project's scope to ensure deliverables are met within budget and time constraints.",
-            "id": 23
-          },
-          {
-            "title": "Task Oversee",
-            "description": "Oversee the daily operations of the remote teams to ensure alignment with corporate goals.",
-            "id": 24
-          },
-          {
-            "title": "Task Facilitate",
-            "description": "Facilitate a series of workshops to drive innovation within the product development team.",
-            "id": 25
+            "title": "Descrizione prodotto",
+            "description": "Creare una pagina di descrizione del prodotto",
+            "id": 26
           }
         ]
       },
@@ -149,29 +114,19 @@
         "name": "Facoltativi",
         "tasks": [
           {
-            "title": "Descrizione prodotto",
-            "description": "Creare una pagina di descrizione del prodotto",
-            "id": 26
-          },
-          {
             "title": "Checkout",
             "description": "Create pagina di checkout, ovvero di chiusura dell'ordine attribuendo un codice univoco all'ordine eseguito",
             "id": 27
           },
           {
-            "title": "Task Resolve",
-            "description": "Resolve ongoing issues with supplier delivery delays impacting production schedules.",
+            "title": "Login",
+            "description": "Inserire una pagina di login (non serve un'effettiva chiamata ad un servizio di login)",
             "id": 28
           },
           {
-            "title": "Task Negotiate",
-            "description": "Negotiate with software vendors to secure better rates for enterprise licenses.",
+            "title": "Carrello per utente",
+            "description": "Una volta creata la pagina di login, ogni utente avrà il suo carrello personale",
             "id": 29
-          },
-          {
-            "title": "Task Innovate",
-            "description": "Innovate new approaches to market analysis that will reduce costs and timeframes.",
-            "id": 30
           }
         ]
       }
