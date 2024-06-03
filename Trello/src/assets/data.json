@@ -1,0 +1,197 @@
+[
+  {
+    "dashboard": "Dashboard #1",
+    "columns": [
+      {
+        "name": "Monday",
+        "tasks": [
+          {
+            "title": "Task Enhance",
+            "description": "Expand an array of services that enrich the client's experience by integrating additional support tools.",
+            "id": 1
+          },
+          {
+            "title": "Task Revise",
+            "description": "Review and improve the current documentation to ensure accuracy and compliance with new regulations.",
+            "id": 2
+          },
+          {
+            "title": "Task Consult",
+            "description": "Provide expert advice on strategic planning and operational efficiency improvements.",
+            "id": 3
+          },
+          {
+            "title": "Task Develop",
+            "description": "Develop new software solutions tailored to market needs, focusing on scalability and security.",
+            "id": 4
+          },
+          {
+            "title": "Task Deploy",
+            "description": "Execute a seamless deployment of the new infrastructure across multiple departments.",
+            "id": 5
+          }
+        ]
+      },
+      {
+        "name": "Tuesday",
+        "tasks": [
+          {
+            "title": "Task Design",
+            "description": "Create a comprehensive layout for the new web interface focusing on UX principles.",
+            "id": 6
+          },
+          {
+            "title": "Task Implement",
+            "description": "Implement the new CRM system to streamline customer relationship management.",
+            "id": 7
+          },
+          {
+            "title": "Task Verify",
+            "description": "Conduct thorough testing to verify the system's functionality across all user scenarios.",
+            "id": 8
+          },
+          {
+            "title": "Task Automate",
+            "description": "Automate repetitive tasks to increase productivity and reduce human error.",
+            "id": 9
+          },
+          {
+            "title": "Task Schedule",
+            "description": "Prepare a detailed project timeline with milestones and deadlines for all team members.",
+            "id": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dashboard": "Dashboard #2",
+    "columns": [
+      {
+        "name": "Wednesday",
+        "tasks": [
+          {
+            "title": "Task Assess",
+            "description": "Evaluate the current network architecture for potential upgrades or enhancements.",
+            "id": 11
+          },
+          {
+            "title": "Task Correct",
+            "description": "Identify and correct data discrepancies in the annual financial report.",
+            "id": 12
+          },
+          {
+            "title": "Task Align",
+            "description": "Align the company's strategic objectives with the operational activities of all departments.",
+            "id": 13
+          },
+          {
+            "title": "Task Execute",
+            "description": "Execute the marketing plan to enter a new market segment within Q4.",
+            "id": 14
+          },
+          {
+            "title": "Task Report",
+            "description": "Generate comprehensive reports on project progress for stakeholder review.",
+            "id": 15
+          }
+        ]
+      },
+      {
+        "name": "Thursday",
+        "tasks": [
+          {
+            "title": "Task Coordinate",
+            "description": "Coordinate between cross-functional teams to ensure project alignment and resource availability.",
+            "id": 16
+          },
+          {
+            "title": "Task Plan",
+            "description": "Plan and schedule the phases of the upcoming product launch.",
+            "id": 17
+          },
+          {
+            "title": "Task Build",
+            "description": "Build a prototype for testing the new design under real-world conditions.",
+            "id": 18
+          },
+          {
+            "title": "Task Analyze",
+            "description": "Analyze user feedback to determine areas for improvement in our service delivery.",
+            "id": 19
+          },
+          {
+            "title": "Task Optimize",
+            "description": "Optimize the production processes to achieve higher efficiency and lower costs.",
+            "id": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dashboard": "Dashboard #3",
+    "columns": [
+      {
+        "name": "Friday",
+        "tasks": [
+          {
+            "title": "Task Review",
+            "description": "Review all team deliverables for compliance with the project's quality standards.",
+            "id": 21
+          },
+          {
+            "title": "Task Update",
+            "description": "Update the internal database with the latest transaction data.",
+            "id": 22
+          },
+          {
+            "title": "Task Manage",
+            "description": "Manage the project's scope to ensure deliverables are met within budget and time constraints.",
+            "id": 23
+          },
+          {
+            "title": "Task Oversee",
+            "description": "Oversee the daily operations of the remote teams to ensure alignment with corporate goals.",
+            "id": 24
+          },
+          {
+            "title": "Task Facilitate",
+            "description": "Facilitate a series of workshops to drive innovation within the product development team.",
+            "id": 25
+          }
+        ]
+      },
+      {
+        "name": "Saturday",
+        "tasks": [
+          {
+            "title": "Task Organize",
+            "description": "Organize a company-wide meeting to discuss the new operational strategies.",
+            "id": 26
+          },
+          {
+            "title": "Task Lead",
+            "description": "Lead the initiative to introduce a new IT infrastructure across the organization.",
+            "id": 27
+          },
+          {
+            "title": "Task Resolve",
+            "description": "Resolve ongoing issues with supplier delivery delays impacting production schedules.",
+            "id": 28
+          },
+          {
+            "title": "Task Negotiate",
+            "description": "Negotiate with software vendors to secure better rates for enterprise licenses.",
+            "id": 29
+          },
+          {
+            "title": "Task Innovate",
+            "description": "Innovate new approaches to market analysis that will reduce costs and timeframes.",
+            "id": 30
+          }
+        ]
+      }
+    ]
+  }
+]

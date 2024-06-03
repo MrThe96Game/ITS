@@ -1,16 +1,22 @@
-import { createMemoryHistory, createRouter } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
-import Test from '../components/Test.vue'
-import Doashboard from '../components/Dashboard.vue'
+import HomePage from '../views/Home.vue';
+import Dashboard from '../views/Dashboard.vue';
 
 const routes = [
-  { path: '/', component: Test },
-  { path: '/dashboard', component: Doashboard },
+  {
+    path: '/',
+    component: HomePage
+  },
+  {
+    path: '/dashboard',
+    component: Dashboard
+  },
 ]
 
 const router = createRouter({
-  history: createMemoryHistory(),
-  routes,
+  history: createWebHistory(process.env.BASE_URL),
+  routes
 })
 
-export default router;
+export default router
